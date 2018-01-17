@@ -30,8 +30,8 @@ function addgamepad(gamepad) {
     var e = document.createElement("input");
     e.className = "button";
     e.value = e.placeholder = gamepad.id=="xinput"?window.GamepadBtns.xinput[i]:gamepad.buttons.length===17?window.GamepadBtns.xinput[i]:i;
-    e.outerHTML+="<br>";
     b.appendChild(e);
+    b.innerHTML+="<br>";
   }
   d.appendChild(b);
   var a = document.createElement("div");
