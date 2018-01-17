@@ -29,8 +29,8 @@ function addgamepad(gamepad) {
   for (var i=0; i<gamepad.buttons.length; i++) {
     var e = document.createElement("input");
     e.className = "button";
-    //e.id = "b" + i;
     e.value = e.placeholder = gamepad.id=="xinput"?window.GamepadBtns.xinput[i]:gamepad.buttons.length===17?window.GamepadBtns.xinput[i]:i;
+    e.outerHTML+="<br>";
     b.appendChild(e);
   }
   d.appendChild(b);
@@ -39,7 +39,6 @@ function addgamepad(gamepad) {
   for (i=0; i<gamepad.axes.length; i++) {
     e = document.createElement("meter");
     e.className = "axis";
-    //e.id = "a" + i;
     e.setAttribute("min", "-1");
     e.setAttribute("max", "1");
     e.setAttribute("value", "0");
