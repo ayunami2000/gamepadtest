@@ -25,10 +25,10 @@ function addgamepad(gamepad) {
   var b = document.createElement("div");
   b.className = "buttons";
   for (var i=0; i<gamepad.buttons.length; i++) {
-    var e = document.createElement("span");
+    var e = document.createElement("input");
     e.className = "button";
     //e.id = "b" + i;
-    e.innerHTML = i;
+    e.value = e.placeholder = i;
     b.appendChild(e);
   }
   d.appendChild(b);
