@@ -44,7 +44,6 @@ function addgamepad(gamepad) {
     e.setAttribute("max", "1");
     e.setAttribute("value", "0");
     e.innerHTML = i;
-    e.style.transform="rotate("+90*i+")";
     a.appendChild(e);
   }
   d.appendChild(a);
