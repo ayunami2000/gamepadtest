@@ -14,7 +14,6 @@ var controllers = {};
 var rAF = window.mozRequestAnimationFrame ||
   window.webkitRequestAnimationFrame ||
   window.requestAnimationFrame;
-
 function connecthandler(e) {
   addgamepad(e.gamepad);
 }
@@ -81,7 +80,6 @@ function updateStatus() {
         b.className = "button";
       }
     }
-
     var axes = d.getElementsByClassName("axis");
     for (var i=0; i<controller.axes.length; i++) {
       var a = axes[i];
@@ -91,7 +89,6 @@ function updateStatus() {
   }
   rAF(updateStatus);
 }
-
 function scangamepads() {
   var gamepads = navigator.getGamepads ? navigator.getGamepads() : (navigator.webkitGetGamepads ? navigator.webkitGetGamepads() : []);
   for (var i = 0; i < gamepads.length; i++) {
@@ -104,7 +101,6 @@ function scangamepads() {
     }
   }
 }
-
 if (haveEvents) {
   window.addEventListener("gamepadconnected", connecthandler);
   window.addEventListener("gamepaddisconnected", disconnecthandler);
