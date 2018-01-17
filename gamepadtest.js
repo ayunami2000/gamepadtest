@@ -6,6 +6,7 @@
  *
  * You should have received a copy of the CC0 Public Domain Dedication along with this software. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
+window.GamepadBtns.xinput=["A","B","X","Y","LB","RB","LT","RT","BACK","START","LS","RS","UP","DOWN","LEFT","RIGHT","HOME"];
 var haveEvents = 'GamepadEvent' in window;
 var haveWebkitEvents = 'WebKitGamepadEvent' in window;
 var controllers = {};
@@ -28,7 +29,7 @@ function addgamepad(gamepad) {
     var e = document.createElement("input");
     e.className = "button";
     //e.id = "b" + i;
-    e.value = e.placeholder = i;
+    e.value = e.placeholder = gamepad.id=="xinput"?window.GamepadBtns.xinput[i]:gamepad.buttons.length===17?window.GamepadBtns.xinput[i]:i;
     b.appendChild(e);
   }
   d.appendChild(b);
