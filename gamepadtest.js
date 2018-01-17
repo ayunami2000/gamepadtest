@@ -50,17 +50,14 @@ function addgamepad(gamepad) {
   document.body.appendChild(d);
   rAF(updateStatus);
 }
-
 function disconnecthandler(e) {
   removegamepad(e.gamepad);
 }
-
 function removegamepad(gamepad) {
   var d = document.getElementById("controller" + gamepad.index);
   document.body.removeChild(d);
   delete controllers[gamepad.index];
 }
-
 function updateStatus() {
   scangamepads();
   for (j in controllers) {
