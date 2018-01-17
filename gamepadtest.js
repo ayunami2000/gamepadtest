@@ -31,7 +31,7 @@ function addgamepad(gamepad) {
     e.placeholder=gamepad.id=="xinput"?window.GamepadBtns.xinput[i]:gamepad.buttons.length===17?window.GamepadBtns.xinput[i]:i;
     b.appendChild(e);
     b.innerHTML+=i%2==0?"":(gamepad.id=="xinput"||gamepad.buttons.length===17)&&i===13?"":"<br>";
-    b.innerHTML+=(gamepad.id=="xinput"||gamepad.buttons.length===17)&&i===(11||3||7||9)?"<br>":"";
+    b.innerHTML+=(gamepad.id=="xinput"||gamepad.buttons.length===17)&&i===(3||7||9||11)?"<br>":"";
   }
   d.appendChild(b);
   var a = document.createElement("div");
